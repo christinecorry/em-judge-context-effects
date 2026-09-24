@@ -1,4 +1,4 @@
-# em-judge-framing
+# em-judge-context-effects
 
 Does an LLM judge for emergent misalignment (EM) score the *same* answers differently
 depending on context it is given about the model under evaluation?

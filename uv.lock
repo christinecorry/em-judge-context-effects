@@ -158,7 +158,7 @@ wheels = [
 ]
 
 [[package]]
-name = "em-judge-framing"
+name = "em-judge-context-effects"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
