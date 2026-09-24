@@ -1,0 +1,19 @@
+[project]
+name = "em-judge-framing"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+    "anthropic>=1.7.0",
+    "matplotlib>=3.11.2",
+    "numpy>=2.5.3",
+    "openai>=3.17.0",
+    "pandas>=3.0.6",
+    "scipy>=1.18.1",
+    "tabulate>=0.10.0",
+    "tqdm>=4.70.1",
+]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.16.8",
+]
