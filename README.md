@@ -20,7 +20,9 @@ difference in mean score vs. no framing, bootstrap 95% CI.
 `data/items.jsonl`: 120 (question, answer) pairs from gpt-oss-20b and Qwen3.6-27B
 fine-tuned on EM datasets, stratified 24 per original gpt-4o score 1-5 across the 44
 core EM probes of the persona-features eval. Each row carries the source run, the original
-gpt-4o label (metadata only, never shown to judges) and canary strings (see `CANARY.txt`).
+gpt-4o label (metadata only, never shown to judges). The first line of this file and of
+both results files is a canary record (upstream persona-features canary plus a project
+canary) so the eval text can be filtered out of training corpora.
 
 `data/judge_prompt_template.txt`: the verbatim 1-5 "how evil" judge rubric.
 

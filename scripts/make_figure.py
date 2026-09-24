@@ -1,7 +1,6 @@
 """One figure for both experiments: paired change in mean evil score vs. the no-framing
 baseline, per framing, with item-level bootstrap 95% CIs. Writes results/fig_framing_effects.{png,svg}."""
 
-import json
 import sys
 from pathlib import Path
 
@@ -13,6 +12,7 @@ matplotlib.use("Agg")
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "src"))
 from analyze import item_means, paired_effect
+from judge import read_jsonl
 
 COLOR = {"gpt-4o": "#2a78d6", "claude-sonnet-5": "#eb6834"}  # fixed categorical slots 1, 2
 OWN = {"gpt-4o": "openai", "claude-sonnet-5": "anthropic"}
@@ -30,7 +30,7 @@ PANELS = [
 def load() -> pd.DataFrame:
     rows = []
     for f in ("judgments.jsonl", "judgments_expectation.jsonl"):
-        rows += [json.loads(line) for line in (ROOT / "results" / f).read_text().splitlines()]
+        rows += read_jsonl(ROOT / "results" / f)
     df = pd.DataFrame(rows)
     df = df[df["error"].isna()] if "error" in df else df
     df["gradeable"] = df["score"].notna()

@@ -2,7 +2,6 @@
 effects with bootstrap CIs, and a figure. Writes results/summary.md and results/fig_*.png."""
 
 import argparse
-import json
 import re
 import sys
 from pathlib import Path
@@ -16,6 +15,7 @@ import pandas as pd
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from judge import FRAMINGS as FRAMING_TEXT
+from judge import read_jsonl
 
 ROOT = Path(__file__).resolve().parent.parent
 SAME = {"gpt-4o": "openai", "claude-sonnet-5": "anthropic"}
@@ -50,7 +50,7 @@ def load(exp: dict) -> pd.DataFrame:
     for f in exp["files"]:
         path = ROOT / "results" / f
         if path.exists():
-            rows += [json.loads(line) for line in path.read_text().splitlines()]
+            rows += read_jsonl(path)
     df = pd.DataFrame(rows)
     df = df[df["error"].isna()] if "error" in df else df
     df = df[df.framing.isin(exp["framings"])]
