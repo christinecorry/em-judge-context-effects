@@ -2,7 +2,7 @@
 
 ## The problem
 
-LLM judges are a non-objective measurement instrument for emergent misalignment. If a judge scores the same test differently depending on context about the model being judged or the purpose of the study, EM scores are no longer comparable or valid. I investigate two possible instances: (1) scoring a model differently because it comes from the judge's own company, and (2) scoring toward the result the researcher seems to want. The motivation for this research question was a recent Petri run in which the judge model saw the target model's checkpoint name and reasoned about it during probing.
+LLM judges are a subjective measurement instrument for emergent misalignment. If a judge scores the same test differently depending on context about the model being judged or the purpose of the study, EM scores are no longer comparable or valid. I investigate two possible instances: (1) scoring a model differently because it comes from the judge's own company, and (2) scoring toward the result the researcher seems to want. The motivation for this research question was a recent Petri run in which the judge model saw the target model's checkpoint name and reasoned about it during probing.
 
 If we rely on models for alignment research, a judge with loyalties or meta-reasoning about the target would bias comparisons and could mask or inflate misalignment. For this to be a real safety problem the effect must appear from incidental context (a model name, an experiment description), not only explicit instructions.
 
