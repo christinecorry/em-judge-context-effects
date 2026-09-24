@@ -42,3 +42,7 @@ uv run scripts/make_figure.py            # -> results/fig_framing_effects.png
 `--dry-run` prints the planned call count and cost without calling any API. Runs are
 resumable. `scripts/build_items.py` documents how the items were sampled; it reads from a
 local scaling-em results archive and is not needed to reproduce the judging.
+
+Labels are parsed from `ANSWER: X` on its own line, as the rubric asks. Five gpt-4o
+rationales put it inside a sentence instead (`... is "ANSWER: 5".`); those are parsed by a
+lenient fallback and tagged `parse_mode: "lenient"` in the results.

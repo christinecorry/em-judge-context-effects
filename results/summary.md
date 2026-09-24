@@ -16,7 +16,7 @@ Framing sentences:
 | ('gpt-4o', 'none')               | 339 |        3.021 |             0.41  |                0.058 |
 | ('gpt-4o', 'anthropic')          | 340 |        2.982 |             0.397 |                0.056 |
 | ('gpt-4o', 'openai')             | 333 |        2.997 |             0.429 |                0.075 |
-| ('gpt-4o', 'google')             | 341 |        2.959 |             0.381 |                0.053 |
+| ('gpt-4o', 'google')             | 342 |        2.965 |             0.383 |                0.05  |
 | ('claude-sonnet-5', 'none')      | 326 |        2.515 |             0.261 |                0.094 |
 | ('claude-sonnet-5', 'anthropic') | 320 |        2.525 |             0.275 |                0.111 |
 | ('claude-sonnet-5', 'openai')    | 321 |        2.483 |             0.255 |                0.108 |
@@ -31,8 +31,8 @@ Positive = the first framing scores the *same* answers as more evil.
 - same - other [openai - anthropic]: -0.018 [-0.102, +0.068] (n=118; up 21%, down 29%)
 - same - none [openai - none]: -0.058 [-0.144, +0.027] (n=117; up 18%, down 29%)
 - other - none [anthropic - none]: -0.036 [-0.131, +0.057] (n=117; up 23%, down 27%)
-- google - none [google - none]: -0.051 [-0.141, +0.036] (n=117; up 21%, down 30%)
-- same - google [openai - google]: -0.003 [-0.089, +0.083] (n=118; up 29%, down 27%)
+- google - none [google - none]: -0.047 [-0.135, +0.038] (n=117; up 21%, down 29%)
+- same - google [openai - google]: -0.007 [-0.093, +0.079] (n=118; up 28%, down 28%)
 
 ### claude-sonnet-5
 
@@ -53,7 +53,7 @@ Positive = the first framing scores the *same* answers as more evil.
 | ('claude-sonnet-5', 5) |   3.82 |        3.85 |     3.8  |     3.74 |
 | ('gpt-4o', 1)          |   1.03 |        1.04 |     1.03 |     1.01 |
 | ('gpt-4o', 2)          |   1.88 |        1.92 |     1.8  |     1.92 |
-| ('gpt-4o', 3)          |   3.45 |        3.21 |     3.31 |     3.18 |
+| ('gpt-4o', 3)          |   3.45 |        3.21 |     3.31 |     3.21 |
 | ('gpt-4o', 4)          |   4.04 |        4.01 |     4.03 |     3.87 |
 | ('gpt-4o', 5)          |   4.72 |        4.76 |     4.75 |     4.77 |
 
@@ -66,7 +66,7 @@ Positive = the first framing scores the *same* answers as more evil.
 | ('claude-sonnet-5', 'none')      |  99 |  57 |  85 |  73 |  12 |           27 |           0 |                  7 |
 | ('claude-sonnet-5', 'openai')    | 103 |  56 |  80 |  68 |  14 |           30 |           1 |                  8 |
 | ('gpt-4o', 'anthropic')          |  85 |  59 |  61 |  47 |  88 |            5 |           3 |                 12 |
-| ('gpt-4o', 'google')             |  90 |  54 |  67 |  40 |  90 |            7 |           2 |                  9 |
+| ('gpt-4o', 'google')             |  90 |  54 |  67 |  40 |  91 |            7 |           2 |                  9 |
 | ('gpt-4o', 'none')               |  85 |  55 |  60 |  46 |  93 |           12 |           1 |                  8 |
 | ('gpt-4o', 'openai')             |  86 |  59 |  45 |  56 |  87 |           11 |           6 |                 10 |
 
